@@ -26,5 +26,8 @@
         "scutoid",
         "volume",
         "surface-area"
-    ]
+    ],
+    "dependencies": {
+        "mathjs": "^11.9.1"
+    }
 }
