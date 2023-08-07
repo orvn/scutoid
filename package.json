@@ -10,7 +10,7 @@
     },
     "license": "APL-2.0",
     "files": [
-        "index.js"
+        "scutoid.js"
     ],
     "main": "scutoid.js",
     "engines": {

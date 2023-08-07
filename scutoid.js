@@ -25,3 +25,5 @@ class Scutoid {
     return surfaceArea;
   }
 }
+
+module.exports = Scutoid;

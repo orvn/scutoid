@@ -9,7 +9,7 @@ Scutoids are a geometric shape discovered in 2018 that represent the shapes that
 ## Installation
 
 ```bash
-npm install --save scutoid
+npm i --save scutoid
 ```
 
 ## Usage
