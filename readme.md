@@ -52,4 +52,11 @@ console.log(`Surface area: ${myScutoid.surface()}`);
 
 ## Development and Testing
 
-This project uses mocha for testing. Run tests with `npm test`
+This project uses mocha for testing. 
+Run tests with `npm test`.
+
+#### TBD
+
+- Support irregular top and bottom prism faces
+- Consider adding prisma, tronco, frustum, prismatoide, escutoide
+- Tests with Mocha
