@@ -1,19 +1,27 @@
 const math = require('mathjs');
 
-function scutoidVolume(prismHeight, prismFaceLength, triangleDepth) {
-    let areaPentagon = (5 / 4) * Math.pow(prismFaceLength, 2) / Math.tan(Math.PI / 5);
-    let volumePentagonPrism = areaPentagon * prismHeight;
-    let areaTriangle = 0.5 * Math.pow((prismFaceLength / 2), 2);
-    let volumeTrianglePrism = areaTriangle * triangleDepth;
+class Scutoid {
+  constructor(prismHeight, prismFaceLength, triangleDepth) {
+    this.prismHeight = prismHeight;
+    this.prismFaceLength = prismFaceLength;
+    this.triangleDepth = triangleDepth;
+  }
+
+  volume() {
+    let areaPentagon = (5 / 4) * math.pow(this.prismFaceLength, 2) / math.tan(math.pi / 5);
+    let volumePentagonPrism = areaPentagon * this.prismHeight;
+    let areaTriangle = 0.5 * math.pow((this.prismFaceLength / 2), 2);
+    let volumeTrianglePrism = areaTriangle * this.triangleDepth;
     let volume = volumePentagonPrism - volumeTrianglePrism;
     return volume;
-}
+  }
 
-function scutoidSurface(prismHeight, prismFaceLength, triangleDepth) {
-    let areaPentagon = (5 / 4) * Math.pow(prismFaceLength, 2) / Math.tan(Math.PI / 5);
-    let areaHexagon = (3 * Math.sqrt(3) / 2) * Math.pow(prismFaceLength, 2);
-    let areaTriangle = 0.5 * prismFaceLength * triangleDepth;
-    let areaTrapezoidTotal = 4 * ((prismHeight + triangleDepth) / 2) * prismFaceLength;
+  surface() {
+    let areaPentagon = (5 / 4) * math.pow(this.prismFaceLength, 2) / math.tan(math.pi / 5);
+    let areaHexagon = (3 * math.sqrt(3) / 2) * math.pow(this.prismFaceLength, 2);
+    let areaTriangle = 0.5 * this.prismFaceLength * this.triangleDepth;
+    let areaTrapezoidTotal = 4 * ((this.prismHeight + this.triangleDepth) / 2) * this.prismFaceLength;
     let surfaceArea = areaPentagon + areaHexagon + areaTriangle + areaTrapezoidTotal;
     return surfaceArea;
+  }
 }
