@@ -1,0 +1,30 @@
+{
+    "name": "scutoid",
+    "description": "Calculate the volume or area of a scutoid.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/orvn/scutoid",
+    "author": "Orun Bhuiyan (https://github.com/orvn)",
+    "repository": "orvn/scutoid",
+    "bugs": {
+        "url": "https://github.com/orvn/scutoid/issues"
+    },
+    "license": "APL-2.0",
+    "files": [
+        "index.js"
+    ],
+    "main": "scutoid.js",
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "devDependencies": {
+        "mocha": "^10.2.0"
+    },
+    "keywords": [
+        "scutoid",
+        "volume",
+        "surface-area"
+    ]
+}
