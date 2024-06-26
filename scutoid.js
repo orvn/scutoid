@@ -5,24 +5,35 @@ class Scutoid {
     this.prismHeight = prismHeight;
     this.prismFaceLength = prismFaceLength;
     this.triangleDepth = triangleDepth;
+    this.halfPrismFaceLength = prismFaceLength / 2;
+  }
+
+  pentagonArea() {
+    return (5 / 4) * math.pow(this.prismFaceLength, 2) / math.tan(math.pi / 5);
+  }
+
+  triangleArea() {
+    return 0.5 * math.pow(this.halfPrismFaceLength, 2);
+  }
+
+  hexagonArea() {
+    return (3 * math.sqrt(3) / 2) * math.pow(this.prismFaceLength, 2);
   }
 
   volume() {
-    let areaPentagon = (5 / 4) * math.pow(this.prismFaceLength, 2) / math.tan(math.pi / 5);
+    let areaPentagon = this.pentagonArea();
     let volumePentagonPrism = areaPentagon * this.prismHeight;
-    let areaTriangle = 0.5 * math.pow((this.prismFaceLength / 2), 2);
+    let areaTriangle = this.triangleArea();
     let volumeTrianglePrism = areaTriangle * this.triangleDepth;
-    let volume = volumePentagonPrism - volumeTrianglePrism;
-    return volume;
+    return volumePentagonPrism - volumeTrianglePrism;
   }
 
   surface() {
-    let areaPentagon = (5 / 4) * math.pow(this.prismFaceLength, 2) / math.tan(math.pi / 5);
-    let areaHexagon = (3 * math.sqrt(3) / 2) * math.pow(this.prismFaceLength, 2);
+    let areaPentagon = this.pentagonArea();
+    let areaHexagon = this.hexagonArea();
     let areaTriangle = 0.5 * this.prismFaceLength * this.triangleDepth;
     let areaTrapezoidTotal = 4 * ((this.prismHeight + this.triangleDepth) / 2) * this.prismFaceLength;
-    let surfaceArea = areaPentagon + areaHexagon + areaTriangle + areaTrapezoidTotal;
-    return surfaceArea;
+    return areaPentagon + areaHexagon + areaTriangle + areaTrapezoidTotal;
   }
 }
 
