@@ -6,6 +6,14 @@ A package to calculate the volume or surface area of a scutoid in Javascript.
 
 Scutoids are a geometric shape discovered in 2018 that represent the shapes that epithelial cells may take within human tissues. This package helps in calculating their volume and surface area.
 
+## Geometry
+
+The scutoid form is essentially a 3-dimensional shape that has a pentagon on one face and a hexagon on the opposite face, with a characteristic Y-junction on its lateral surface.
+
+- The shape starts with a pentagonal prism as the base structure
+- Then a triangular prism is subtracted from one edge
+- This creates the transition from pentagon to hexagon across the height
+
 ## Installation
 
 ```bash
