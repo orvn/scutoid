@@ -1,3 +1,19 @@
-// let scutoid = new Scutoid(10, 2, 5);
-// console.log(scutoid.volume());  // outputs: 14.70477401 m3
-// console.log(scutoid.surface()); // outputs: surface area in m2 (exact value depends on your inputs)
+'use strict';
+
+require('mocha');
+const assert = require('assert');
+const Scutoid = require('./scutoid.js');
+
+describe('Scutoid', function() {
+  it('Returns the expectedvolume of a scutoid with specific properties: ', function() {
+    let scutoid = new Scutoid(10, 2, 5);
+    let volume = scutoid.volume();
+    assert.equal(Math.round(volume * 100) / 100, 66.32);
+  });
+
+  it('Returns the expected surface area of a scutoid with specific properties:', function() {
+    let scutoid = new Scutoid(10, 2, 5);
+    let surface = scutoid.surface();
+    assert.equal(Math.round(surface * 100) / 100, 82.27);
+  });
+});
