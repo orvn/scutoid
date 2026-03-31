@@ -63,6 +63,8 @@ console.log(`Surface area: ${myScutoid.surface()}`);
 This project uses mocha for testing. 
 Run tests with `npm test`.
 
+![Scutoid animation](assets/images/scutoid-animation.gif)
+
 #### TBD
 
 - Support irregular top and bottom prism faces
